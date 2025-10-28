@@ -1,8 +1,8 @@
 - 👋 Hi, I’m @int_64
 - 👀 I’m interested in c++ , python and JS programming
-- 🌱 I’m currently learning React, Flask and Django
+- 🌱 I’m currently learning about Nuclear Reactors, Neutron Difussion, and Field Emision.
 - 💞️ I’m looking to collaborate on different projects
-- 📫 How to reach me carlosr301101@gmail.com and @int_64 on telegram
+- 📫 How to reach me @int_64 on telegram
 
 <h2> &#8203 &#8203
 	<a href="https://t.me/int_64">
