@@ -1,11 +1,10 @@
-// @ts-check
-
+import { defineConfig } from 'astro/config';
 import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
-import { defineConfig } from 'astro/config';
+import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://carlosr301101.github.io',
-	integrations: [mdx(), sitemap()],
+  site: 'https://carlosr301101.github.io/',
+  integrations: [mdx(), sitemap(), tailwind()]
 });
