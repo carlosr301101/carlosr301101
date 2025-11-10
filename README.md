@@ -14,8 +14,6 @@
   </a>
 </h2>
 
-
-
 <!---
 int_64 is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 You can click the Preview link to take a look at your changes.
@@ -27,5 +25,3 @@ You can click the Preview link to take a look at your changes.
     <img src="https://skillicons.dev/icons?i=django,cpp,css,html,js,linux,arch,anaconda,py,&perline=14" />
 </a>
 </p>
-
-
