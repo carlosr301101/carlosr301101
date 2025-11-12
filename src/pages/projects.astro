@@ -5,23 +5,24 @@ import HorizontalCard from '../components/HorizontalCard.astro'
 
 <BaseLayout title="Projects" sideBarActiveItemID="projects">
 	<div>
-		<div class="mb-5 w-full text-3xl font-bold">Projects Header</div>
+		<div class="mb-5 w-full text-3xl font-bold">Recent Projects</div>
 	</div>
 
 	<HorizontalCard
 		title="Fast API Todo with IA integration"
-		img="/post_img.webp"
+		img="/todo-fastapi.png"
 		desc="Another Todo APP, but it's difference from others because use integration with IA to build resumes of your daily rutine and activities "
 		url="https://github.com/carlosr301101/todo-backend-FastAPI"
-		badge="Fast API"
+		badge="FastAPI"
 		
 	/>
 	<div class="divider my-0"></div>
 	<HorizontalCard
 		title="int64grep"
-		img="/post_img.webp"
+		img="/int64grep.png"
 		desc="It's a new flavour of grep, builded in Rust, to enhance speed and relaibility."
 		url="https://crates.io/crates/int64grep"
+		badge="Rust"
 	/>
 
 	<div>
@@ -29,18 +30,19 @@ import HorizontalCard from '../components/HorizontalCard.astro'
 	</div>
 
 	<HorizontalCard
-		title="Demo Project 3"
-		img="/post_img.webp"
-		desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-		url="#"
-		badge="FOSS"
+		title="Books to Scrape"
+		img="/books_scrape.png"
+		desc="Developed a Next.js-based frontend for a book scraping system, featuring a responsive and user-friendly interface built with shadcn/ui, Tailwind CSS, and TypeScript. Integrated axios to communicate with a FAST API backend, enabling users to trigger scraping jobs (via POST /init). "
+		url="https://github.com/carlosr301101/book_scrape"
+		badge="FastAPI | Next.js"
 	/>
 	<div class="divider my-0"></div>
 	<HorizontalCard
-		title="Demo Project 4"
-		img="/post_img.webp"
-		desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-		url="#"
+		title="Mi Negocio Web App"
+		img="/minegocio.pythonanywhere.com.png"
+		desc="Developed and maintain a retail sales management platform for small businesses, enabling them to showcase products and services online. Implemented JWT-based authentication, a responsive Bootstrap frontend for an intuitive shopping experience, and a lightweight P2P payment integration via QR codes and WhatsApp."
+		url="https://minegocio.pythonanywhere.com/Mi_negocio/listar_tiendas"
+		badge="Django | Bootstrap"
 	/>
 	<div class="divider my-0"></div>
 	<HorizontalCard
