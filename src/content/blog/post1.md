@@ -4,7 +4,7 @@ description: 'This article is a call to action to cuban DEV community to use Rus
 pubDate: 'Nov 12 2025'
 heroImage: '/post_img.webp'
 badge: 'Rust'
-tags: ['Rust','Community']
+tags: ['Doc','Community', 'Learn']
 ---
 ## Rust highlights
 Rust defines itself as *Blazingly fast and memory-efficient* and it's **true** [[1]](https://rust-lang.org), At this day Rust is the most respected Programming Language among developers. This language proposed a new way to manage memories leaks and dangling pointer as the cornerstone of the Rust's zen. The *borrow-checker* is a new approach to achieve this goal and differentiate it from other languages. [[2]](https://doc.rust-lang.org/book/ch04-00-understanding-ownership.html)
@@ -27,9 +27,9 @@ Starting with Rust is very easy, if you have certain background in programming a
 
 3. Build a project, is the best way to learn and struggle with strange logics till all that darkness became clear, there is a few examples into the Rust Doc.
 
-I hope you join this community, help it to grow, and reach out to everyone around to make it better.
+### **I hope you join this community, help it to grow, and reach out to everyone around to make it better.!!!**
 
 ```rust
-panic!("Keep Leaning")
+panic!("Keep Leaning");
 ```
 
