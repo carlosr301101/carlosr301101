@@ -1,56 +1,35 @@
 ---
-title: 'Demo Post 1'
-description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-pubDate: 'Sep 10 2022'
+title: 'Cuban community for Rust.'
+description: 'This article is a call to action to cuban DEV community to use Rust.'
+pubDate: 'Nov 12 2025'
 heroImage: '/post_img.webp'
-tags: ['tokio']
+badge: 'Rust'
+tags: ['Rust','Community']
 ---
+## Rust highlights
+Rust defines itself as *Blazingly fast and memory-efficient* and it's **true** [[1]](https://rust-lang.org), At this day Rust is the most respected Programming Language among developers. This language proposed a new way to manage memories leaks and dangling pointer as the cornerstone of the Rust's zen. The *borrow-checker* is a new approach to achieve this goal and differentiate it from other languages. [[2]](https://doc.rust-lang.org/book/ch04-00-understanding-ownership.html)
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-incididunt ut labore et dolore magna aliqua. Vitae ultricies leo integer
-malesuada nunc vel risus commodo viverra. Adipiscing enim eu turpis egestas
-pretium. Euismod elementum nisi quis eleifend quam adipiscing. In hac habitasse
-platea dictumst vestibulum. Sagittis purus sit amet volutpat. Netus et malesuada
-fames ac turpis egestas. Eget magna fermentum iaculis eu non diam phasellus
-vestibulum lorem. Varius sit amet mattis vulputate enim. Habitasse platea
-dictumst quisque sagittis. Integer quis auctor elit sed vulputate mi. Dictumst
-quisque sagittis purus sit amet.
+We use **Rust** in a lot of cases or services where performance and reliability is essential and we need to ship robust solutions with low chance to make mistakes, even though Rust isn't easy to learn, and demands a lot of effort and neurons on this learning process.
 
-Morbi tristique senectus et netus. Id semper risus in hendrerit gravida rutrum
-quisque non tellus. Habitasse platea dictumst quisque sagittis purus sit amet.
-Tellus molestie nunc non blandit massa. Cursus vitae congue mauris rhoncus.
-Accumsan tortor posuere ac ut. Fringilla urna porttitor rhoncus dolor. Elit
-ullamcorper dignissim cras tincidunt lobortis. In cursus turpis massa tincidunt
-dui ut ornare lectus. Integer feugiat scelerisque varius morbi enim nunc.
-Bibendum neque egestas congue quisque egestas diam. Cras ornare arcu dui vivamus
-arcu felis bibendum. Dignissim suspendisse in est ante in nibh mauris. Sed
-tempus urna et pharetra pharetra massa massa ultricies mi.
+Most common uses of Rust are building CLIs and Terminal Applications but it has a wide range were Rust overcome other languages and has so much potential like Backend Architecture, HTTPS servers, IoT and so on. It is the strong community and hearth-bound to Rust principles that brings us powerfull tools like **uv** [[3]](https://docs.astral.sh/uv), **git-cliff** [[4]](https://git-cliff.org) and every day the list expands.
 
-Mollis nunc sed id semper risus in. Convallis a cras semper auctor neque. Diam
-sit amet nisl suscipit. Lacus viverra vitae congue eu consequat ac felis donec.
-Egestas integer eget aliquet nibh praesent tristique magna sit amet. Eget magna
-fermentum iaculis eu non diam. In vitae turpis massa sed elementum. Tristique et
-egestas quis ipsum suspendisse ultrices. Eget lorem dolor sed viverra ipsum. Vel
-turpis nunc eget lorem dolor sed viverra. Posuere ac ut consequat semper viverra
-nam. Laoreet suspendisse interdum consectetur libero id faucibus. Diam phasellus
-vestibulum lorem sed risus ultricies tristique. Rhoncus dolor purus non enim
-praesent elementum facilisis. Ultrices tincidunt arcu non sodales neque. Tempus
-egestas sed sed risus pretium quam vulputate. Viverra suspendisse potenti nullam
-ac tortor vitae purus faucibus ornare. Fringilla urna porttitor rhoncus dolor
-purus non. Amet dictum sit amet justo donec enim.
+## Funding a Community
+As a Nuclear Engineer, in my opinion Rust's power and reliability seems very similar to nuclear energy, and it has so much potential in this niche of science and strong secure processes. Rust safety gives us a fine-tune environment where we can explore, build , share projects with and for the dev community. 
 
-Mattis ullamcorper velit sed ullamcorper morbi tincidunt. Tortor posuere ac ut
-consequat semper viverra. Tellus mauris a diam maecenas sed enim ut sem viverra.
-Venenatis urna cursus eget nunc scelerisque viverra mauris in. Arcu ac tortor
-dignissim convallis aenean et tortor at. Curabitur gravida arcu ac tortor
-dignissim convallis aenean et tortor. Egestas tellus rutrum tellus pellentesque
-eu. Fusce ut placerat orci nulla pellentesque dignissim enim sit amet. Ut enim
-blandit volutpat maecenas volutpat blandit aliquam etiam. Id donec ultrices
-tincidunt arcu. Id cursus metus aliquam eleifend mi.
+This is a first call to found **RustCubans** commmunity and start to build together and share experiences and knowledge, Rust has so much to thrive so on these community. Publishing your programs or apps on Cargo [[5]](https://doc.rust-lang.org/book/ch14-02-publishing-to-crates-io.html) is a very easy way to be seen by the **rustaceans** (*International Rust Community*). 
 
-Tempus quam pellentesque nec nam aliquam sem. Risus at ultrices mi tempus
-imperdiet. Id porta nibh venenatis cras sed felis eget velit. Ipsum a arcu
-cursus vitae. Facilisis magna etiam tempor orci eu lobortis elementum. Tincidunt
-dui ut ornare lectus sit. Quisque non tellus orci ac. Blandit libero volutpat
-sed cras. Nec tincidunt praesent semper feugiat nibh sed pulvinar proin gravida.
-Egestas integer eget aliquet nibh praesent tristique magna.
+## First Steps With Rust.
+Starting with Rust is very easy, if you have certain background in programming at low-level programming, if you know heap, stack and pointers, so you won't have any trouble to figure out how Rust works under the hood. For beginners I recommend using a different approach and start to learn like newborns, by imitation and asking to your confidant (*AI*) how things works, play with the code, don't be lazy and you won't fall into the imposter syndrome trap. Both types of learners will learn Rust with the same materials but by different ways. 
+
+1. Use the documentation [[6]](https://doc.rust-lang.org/book/ch00-00-introduction.html) take your time to enjoy this delightful piece from dev community, is very easy to follow and has a lot of examples (*play with them*).
+
+2. Use rustlings [[7]](https://rustlings.rust-lang.org), it's a gamified version of learn Rust and save your progress meanwhile they guide you through essentials of Rust.
+
+3. Build a project, is the best way to learn and struggle with strange logics till all that darkness became clear, there is a few examples into the Rust Doc.
+
+I hope you join this community, help it to grow, and reach out to everyone around to make it better.
+
+```rust
+panic!("Keep Leaning")
+```
+
