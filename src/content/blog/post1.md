@@ -30,6 +30,6 @@ Starting with Rust is very easy, if you have certain background in programming a
 ### **I hope you join this community, help it to grow, and reach out to everyone around to make it better.!!!**
 
 ```rust
-panic!("Keep Leaning");
+panic!("Keep learning");
 ```
 
