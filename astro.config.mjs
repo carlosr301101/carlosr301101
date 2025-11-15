@@ -5,12 +5,6 @@ import tailwind from '@astrojs/tailwind'
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://carlosr301101.github.io/',
-	integrations: [mdx(), sitemap({
-		filenameBase:'sitemap',
-        xslURL: '/sitemap.xsl',
-        changefreq: 'weekly',
-        priority: 0.7,
-        entryLimit: 45000,
-	}), tailwind()],
+	site: 'https://carlosr301101.github.io',
+	integrations: [mdx(), sitemap(), tailwind()],
 })
