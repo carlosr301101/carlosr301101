@@ -1,4 +1,34 @@
+# ------------------------------------
+# Reglas Generales
+# ------------------------------------
 User-agent: *
 Allow: /
 
-Sitemap: https://<YOUR SITE>/sitemap-index.xml
+# ------------------------------------
+# Reglas Específicas para IA (Permisos Explícitos)
+# ------------------------------------
+
+# OpenAI (ChatGPT y entrenamiento de modelos GPT)
+User-agent: GPTBot
+Allow: /
+
+# OpenAI (Navegación en tiempo real de usuarios de ChatGPT)
+User-agent: ChatGPT-User
+Allow: /
+
+# Google Gemini y Vertex AI (Google-Extended permite uso en IA sin afectar SEO tradicional)
+User-agent: Google-Extended
+Allow: /
+
+# Common Crawl (Base de datos usada para entrenar a la mayoría de las IAs)
+User-agent: CCBot
+Allow: /
+
+# Anthropic (Claude)
+User-agent: anthropic-ai
+Allow: /
+
+# ------------------------------------
+# Mapa del Sitio
+# ------------------------------------
+Sitemap: https://carlosr301101.github.io/sitemap-index.xml
