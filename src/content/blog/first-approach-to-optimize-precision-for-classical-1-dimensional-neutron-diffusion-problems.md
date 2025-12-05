@@ -45,3 +45,15 @@ The significant advantage is code portability. Since the entire computation (dis
 The paper differentiates its approach from surrogate modeling, stating that their method provides an exact representation of a given discretization, whereas surrogate models only provide an approximation requiring training.
 
 The authors adopt an approach that uses untrained networks because they are primarily interested in solving discretizations exactly, rather than approximating solutions via training.
+
+## Conclusion
+The integration of DL into Neutron Diffusion Problems is not a mere technological upgrade; it is a paradigm shift towards data-informed physics modeling.
+By establishing a robust foundation of high-precision classical solutions, we create the ground truth necessary to train and validate these neural network models. This roadmap leads to:
+
+* Ultra-fast solvers for real-time control.
+
+* Efficient optimization for advanced reactor design.
+
+* Robust data assimilation for improved operational safety and maintenance.
+
+This new approach ensures that the accuracy achieved by decades of nuclear computational science is preserved, while the computational speed required for modern, complex engineering challenges is finally met.
