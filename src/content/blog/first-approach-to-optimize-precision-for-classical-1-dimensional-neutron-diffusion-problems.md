@@ -1,5 +1,5 @@
 ---
-title: 'First approach to otimize precision for clasical 1-Dimensional neutron diffusion problems.'
+title: 'First approach to optimize precision for classical 1-Dimensional neutron diffusion problems.'
 description: 'The goal of this lecture is about building the foundation for a roadmap to integrate Neutron Diffusion Problems with a non deterministic approach using Deep Learning.'
 pubDate: 'Dec 4 2025'
 heroImage: '/first-approach-to-optimize-precision-for-classical-1-dimensional-neutron-diffusion-problems.webp'
@@ -8,14 +8,14 @@ tags: ['Algorithm','Math', 'Learn']
 ---
 
 ## The Importance of New Approaches: Bridging Deterministic Precision and Data-Driven Speed.
-The shift toward integrating Deep Learning (DL) <a href="https://www.deeplearningbook.org" target="_blank">[ 1 ]</a> , specifically methods like Physics-Informed Neural Networks (PINNs)<a href="https://docs.nvidia.com/physicsnemo/latest/physicsnemo-sym/user_guide/theory/phys_informed.html" target="_blank">[ 2 ]</a>, into computational neutronics marks a critical advancement. This transition isn't about replacing classical methods entirely, but rather about addressing their fundamental limitations in the context of modern reactor design and operational analysis.
+The shift toward integrating Deep Learning (DL) <a href="https://www.deeplearningbook.org" target="_blank">[ 1 ]</a> , and specifically methods like Physics-Informed Neural Networks (PINNs)<a href="https://docs.nvidia.com/physicsnemo/latest/physicsnemo-sym/user_guide/theory/phys_informed.html" target="_blank">[ 2 ]</a>, into computational neutronics marks a critical advancement. This transition isn't about entirely replacing classical methods entirely, but rather about addressing their fundamental limitations in the context of modern reactor design and operational analysis.
 
 ### 1. The Challenge of Computational Cost
 Classical, high-fidelity deterministic methods (like fine-mesh Finite Difference or Finite Element methods) <a href="https://www.ljll.fr/~frey/cours/UdC/ma691/ma691_ch6.pdf" target="_blank">[ 3 ]</a> are the gold standard for accuracy. However, they are computationally expensive:
 
 * **Time-Critical Applications:** In dynamic simulations (like transient analysis) or real-time control systems, solving the underlying Partial Differential Equations (PDEs) at every time step is too slow. Engineers often have to sacrifice precision for speed, relying on highly simplified low-order models.
 
-* **Design Optimization:** Reactor design involves exploring a massive parameter space (material composition, geometry, moderator-to-fuel ratios). Each design iteration requires a full neutronics calculation. Using classical solvers makes optimization studies take weeks or even months.
+* **Design Optimization:** Reactor design involves exploring a massive parameter space (material composition, geometry, moderator-to-fuel ratios). Each design iteration requires a full neutronics calculation. Using classical solvers can make optimization studies take weeks or even months.
 
 * **The Solution:** A well-trained PINN can provide an approximate solution to the Neutron Diffusion Equation in a fraction of a second (milliseconds), effectively decoupling the solution speed from the mesh size or iteration count.
 
@@ -38,7 +38,7 @@ While the first approach focuses on using clean, high-fidelity data, the ultimat
 * **Data Integration:** PINNs and other DL techniques are uniquely suited to fuse noisy experimental data (non-deterministic) with the established physical laws (deterministic). The loss function automatically penalizes solutions that violate physics, providing a smoothing and regularization effect on sparse or noisy measurement data. This yields a more robust and reliable estimate of the core state than relying solely on measurements or solely on a potentially outdated deterministic model.
 
 ## 5. Similar works
-In 2023 a paper were released with a similar approach for *"Solving the discretised neutron diffusion equations using neural networks"* <a href="https://onlinelibrary.wiley.com/doi/10.1002/nme.7321" target="_blank">[ 4 ]</a>. The paper outlines a method to resolve this by reformulating numerical discretizations (Finite Volume and Finite Element) in terms of standard operations found in AI libraries, particularly discrete convolutions.
+In 2023 a paper was released with a similar approach for *"Solving the discretised neutron diffusion equations using neural networks"* <a href="https://onlinelibrary.wiley.com/doi/10.1002/nme.7321" target="_blank">[ 4 ]</a>. The paper outlines a method to resolve this by reformulating numerical discretizations (Finite Volume and Finite Element) in terms of standard operations found in AI libraries, particularly discrete convolutions.
 
 The significant advantage is code portability. Since the entire computation (discretization and solving) is expressed using functions from widely supported AI libraries, the code can be deployed seamlessly across CPUs, GPUs, and AI processors without modification. The results are shown to be identical to those obtained by standard, non-AI-library codes (e.g., Fortran) <a href="https://github.com/trfphillips/Neural-Network-Transport-Solver" target="_blank">[ 5 ]</a> .
 
