@@ -1,13 +1,13 @@
 ---
 title: 'First approach to optimize precision for classical 1-Dimensional neutron diffusion problems.'
-description: 'The goal of this lecture is about building the foundation for a roadmap to integrate Neutron Diffusion Problems with a non deterministic approach using Deep Learning.'
+description: 'The goal of this post is about building the foundation for a roadmap to integrate Neutron Diffusion Problems with a non deterministic approach using Deep Learning.'
 pubDate: 'Dec 4 2025'
 heroImage: '/first-approach-to-optimize-precision-for-classical-1-dimensional-neutron-diffusion-problems.webp'
 badge: 'Physics'
 tags: ['Algorithm','Math', 'Learn']
 ---
 
-## The Importance of New Approaches: Bridging Deterministic Precision and Data-Driven Speed.
+## The Importance of New Approaches: Bridging Non Deterministic Precision and Data-Driven Speed.
 The shift toward integrating Deep Learning (DL) <a href="https://www.deeplearningbook.org" target="_blank">[ 1 ]</a> , and specifically methods like Physics-Informed Neural Networks (PINNs)<a href="https://docs.nvidia.com/physicsnemo/latest/physicsnemo-sym/user_guide/theory/phys_informed.html" target="_blank">[ 2 ]</a>, into computational neutronics marks a critical advancement. This transition isn't about entirely replacing classical methods entirely, but rather about addressing their fundamental limitations in the context of modern reactor design and operational analysis.
 
 ### 1. The Challenge of Computational Cost
