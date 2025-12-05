@@ -2,7 +2,7 @@
 title: 'Cuban community for Rust.'
 description: 'This article is a call to action for cuban DEV community to use Rust.'
 pubDate: 'Nov 12 2025'
-heroImage: '/post_img.webp'
+heroImage: '/cuban_community_for_rust.png'
 badge: 'Rust'
 tags: ['Doc', 'Community', 'Learn']
 ---
