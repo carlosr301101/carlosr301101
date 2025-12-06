@@ -107,9 +107,9 @@ The architectural approach, which couples an automated Problem Generator with th
 
 ### The foundation of Data Base to explore complex problems through PINN
 
-The highly structured and voluminous data generated forms the ideal foundation for a training database to explore more complex solutions, particularly those involving Physics-Informed Neural Networks (PINNs).
+The highly structured and voluminous data generated forms the ideal foundation for a training database to explore more complex solutions, particularly those involving Physics Informed Neural Networks (PINNs).
 
-- **Training Data:** PINNs require large amounts of accurate data (or highly constrained physics laws) to learn the underlying differential equations. The output of the DD solver—the calculated flux profiles ($\phi$) and the corresponding input parameters ($\Sigma_t$, geometry, etc.)—serve as high-quality labeled data for training a PINN model.
+- **Training Data:** PINNs require large amounts of accurate data (or highly constrained physics laws) to learn the underlying differential equations. The output of the DD solver, the calculated flux profiles ($\phi$) and the corresponding input parameters ($\Sigma_t$, geometry, etc.) serve as high-quality labeled data for training a PINN model.
 
 - **Complex Problem Exploration:** By training a PINN on thousands of solved 1-D DD problems, the resulting neural network could potentially be used to quickly predict the solution for new, unseen 1-D problems or serve as an initial guess for more complex, multi-dimensional problems, bypassing the need for traditional iterative solvers.
 
