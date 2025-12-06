@@ -1,0 +1,124 @@
+---
+title: '1-Dimensional solver to Neutron Diffusion Problems using Diamond Difference algorithm'
+description: 'This is a first presentation of this 1-Dimensional solver to Neutron Diffusion Problems using Diamond Difference (DD) algorithm'
+pubDate: 'Dec 6 2025'
+heroImage: '/first-approach-to-optimize-precision-for-classical-1-dimensional-neutron-diffusion-problems.webp'
+badge: 'Physics'
+tags: ['Algorithm', 'Math', 'Python']
+---
+
+## A first step.
+
+As we know this kind of algorithm solver is the first of a more complex approach to solve Neutron Diffusion Problems. But for the scope of this work is helpfull because it's a easy tool to implement. The author had developed an python script using this algorithm (DD), but with a different approach into script architecture. The goal isn't another 1-D solver, but a foundation of automatization to generate a set of problems geometry and the using this algorithm (DD) to solve all of them.
+In this post we are going to deep dive into this approach and why we need this kind of first step, to reach further results on our goal to optimize precision for classical 1-Dimensional Neutron Diffusion Problems.
+
+## Breaking the algorithm
+
+### The Architecture
+
+The choice of Python (version 3.13) as the cornerstone for this project is strategic, aligning with its role as the de facto language for modern scientific computing and data automation. Python's extensive ecosystem provides the robust tools necessary for both the algorithmic core and the automation framework. The architecture is designed to be modular, separating the logic of problem generation from the logic of the Neutron Diffusion (DD) solver. This separation is crucial for scalability, testing, and future complex enhancements.
+
+### The package manager UV <a href="https://docs.astral.sh/uv" target="_blank">[ 1 ]</a>
+
+The selection of UV as the package manager is a critical decision that directly addresses the needs of a high-performance scientific computing project, particularly one focused on automation and reproducibility for the Neutron Diffusion (DD) solver. While a newcomer, its Rust-based foundation provides significant architectural advantages over traditional Python tools. Scientific projects, especially those relying on packages like NumPy and SciPy, often have large and complex dependency graphs. UV utilizes a modern, parallelized resolver that is significantly faster and more reliable at finding a compatible set of package versions, reducing the common headache of "dependency hell."
+
+This are the dependencies of this project.
+
+```toml
+dependencies = [
+    "matplotlib>=3.10.7",
+    "numpy>=2.3.5",
+    "openpyxl>=3.1.5",
+    "pandas>=2.3.3",
+]
+```
+
+---
+
+### The Code <a href="https://github.com/carlosr301101/neutron-diffusion-dd" target="_blank">[ 2 ]</a>
+
+**Config files:** The use of a structured Python dictionary (`config_dict`) for defining the problem geometry and properties is the key architectural step that enables the desired automatization and systematic generation of 1-Dimensional Neutron Diffusion problems. This approach serves as the single, programmatic source of truth for the solver.
+
+```python
+config_dict = {
+    "num_regions": 1,
+    "num_zones": 1,
+    "NC": [100],
+    "HR": [100],
+    "IZL": [1],
+    "SCT": [1.0],
+    "SCS": [0.9],
+    "Q": [0],
+    "N": 4,
+    "reflex_izq": False,
+    "reflex_der": False,
+    "bound_left": [1, 1],
+    "bound_right": [0, 0],
+}
+```
+
+The DD Solver Module needs input parameters (e.g., cross-sections, mesh size) to execute. By placing these parameters in a dictionary, the solver code itself remains clean and generic. It doesn't contain any hardcoded problem data; it only knows how to read the dictionary. This makes the DD Solver reusable. You can feed it any dictionary conforming to this structure, and it will attempt to solve that specific problem without needing any code changes.
+
+Instead of manually creating dozens of input files, the script can use Python loops to iterate over a range of desired parameters and create a unique config*dict for each test case. For example, to test the effect of mesh refinement, the script can simply iterate a loop and change the number of cells (*"NC"\_) value for each dictionary generated to find the optimus trade off between NC and Iter_Step.
+
+**Runner:** The Runner encapsulates three critical management tasks: Iteration Control, Solution Sweeps, and Convergence Monitoring. The Runner calls the methods that implement the DD algorithm's key feature sweeping the solution across the 1-D domain.Left-to-Right Sweep (Forward) and Calculates the flux solution by starting at the left boundary (e.g., $x=0$) and marching numerically across the spatial mesh towards the right boundary ($x=L$). The final flux solution at each iteration ($m+1$) is often a combination (e.g., an average or weighted combination) of the results from the left and right sweeps, which helps to accelerate convergence and accurately satisfy both boundary conditions simultaneously.
+
+Flux Convergence: The error in the neutron flux is often calculated using a relative or absolute norm (e.g., L2 norm) over all mesh cells:
+
+$$\epsilon_{\phi}^{(m+1)} = \frac{||\phi^{(m+1)} - \phi^{(m)}||}{||\phi^{(m+1)}||}\space\space(1)$$
+
+This is a list of methods that implements this class "Runner"<a href="https://github.com/carlosr301101/neutron-diffusion-dd/blob/main/core/algoritm.py" target="_blank">[ 3 ]</a>:
+
+```python
+def __init__(self, config: Config): # A constructor class which uses a config parameter
+
+def boundary_conditions_left(self): # Loads left boundary conditions
+
+def boundary_conditions_right(self): # Loads right boundary conditions
+
+def update_reflective_boundaries_left(self):
+
+def update_reflective_boundaries_right(self):
+
+def sweep(self): # Sweep both sides
+
+def calculo_flujo(self): # Compute the average flux
+
+def calculo_fugas(self, frontera: int): # Compute the out of bounds neutrons
+
+def check_convergence(self, old_flux): # Apply the convergence formula
+```
+
+### The Extensions: Automated Data Reporting
+
+The objective is to consolidate all facets of the solved problem—the input configuration, the material properties, the calculated solution, and the performance metrics—into a single file. This is crucial for the overall goal of optimizing precision, as it allows engineers to quickly compare results across the entire automated set of generated problems.
+
+The Runner module pass their collected data to this extension, which uses the pandas library to structure the information before exporting it via the to_excel method.
+
+## Advantages of this approach
+
+The architectural approach, which couples an automated Problem Generator with the DD Solver Runner and a robust Reporting Extension, yields significant advantages, transforming the project from a simple solver into a powerful scientific automation framework.
+
+**Serialization:** refers to the process of converting a data structure or object state into a format that can be stored or transmitted and later reconstructed. In this context:
+
+Configuration Files (config_dict): The dictionary defining the geometry, mesh, and material properties is easily serializable (e.g., to JSON or YAML). This means that every single problem generated by the automation module can be saved as a simple text file.
+
+Advantage: This ensures perfect reproducibility. If a bug is discovered in the solver six months from now, the exact input used to generate a questionable result can be loaded and executed again, guaranteeing the input is identical. This is critical in scientific computing where results must be verifiable.
+
+### The foundation of Data Base to explore complex problems through PINN
+
+The highly structured and voluminous data generated forms the ideal foundation for a training database to explore more complex solutions, particularly those involving Physics-Informed Neural Networks (PINNs).
+
+- **Training Data:** PINNs require large amounts of accurate data (or highly constrained physics laws) to learn the underlying differential equations. The output of the DD solver—the calculated flux profiles ($\phi$) and the corresponding input parameters ($\Sigma_t$, geometry, etc.)—serve as high-quality labeled data for training a PINN model.
+
+- **Complex Problem Exploration:** By training a PINN on thousands of solved 1-D DD problems, the resulting neural network could potentially be used to quickly predict the solution for new, unseen 1-D problems or serve as an initial guess for more complex, multi-dimensional problems, bypassing the need for traditional iterative solvers.
+
+**Advantage:** This approach bridges classical numerical methods (DD) with modern machine learning techniques (PINNs), enabling future research into faster and novel ways to solve neutronics problems.
+
+## Conclusions
+
+The path forward involves utilizing this automated framework to perform the planned precision optimization studies and then transitioning the project to the more complex exploration of PINNs, solidifying this work as a vital stepping stone in the development of advanced neutron transport and diffusion solvers.
+
+```rs
+panic!("Keep learning");
+```
