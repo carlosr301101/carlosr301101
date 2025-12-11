@@ -12,6 +12,7 @@ const blogSchema = z.object({
 			message: 'tags must be unique',
 		})
 		.optional(),
+	timeRead: z.number().optional(),
 })
 
 const storeSchema = z.object({
