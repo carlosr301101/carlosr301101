@@ -6,7 +6,6 @@ heroImage: '/first-approach-to-optimize-precision-for-classical-1-dimensional-ne
 badge: 'Physics'
 tags: ['Algorithm', 'Math', 'Learn']
 timeRead: 10
-
 ---
 
 ## The Importance of New Approaches: Bridging Non Deterministic Precision and Data-Driven Speed.

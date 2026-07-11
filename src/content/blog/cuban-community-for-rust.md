@@ -6,7 +6,6 @@ heroImage: '/cuban_community_for_rust.webp'
 badge: 'Rust'
 tags: ['Doc', 'Community', 'Learn']
 timeRead: 8
-
 ---
 
 ## Rust highlights
