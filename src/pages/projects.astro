@@ -5,40 +5,6 @@ import HorizontalCard from '../components/HorizontalCard.astro'
 
 <BaseLayout title="Projects" sideBarActiveItemID="projects">
 	<div>
-		<div class="mb-5 w-full text-3xl font-bold">Utils Projects 🛠️</div>
-	</div>
-
-	<HorizontalCard
-		title="Fast API Todo with IA integration"
-		img="/todo-fastapi.webp"
-		desc="Another Todo APP, but it's difference from others because use integration with IA to build resumes of your daily rutine and activities "
-		url="https://github.com/carlosr301101/todo-backend-FastAPI"
-		badge="FastAPI"
-		loading="eager"
-	/>
-
-	<div class="divider my-0"></div>
-
-	<div class="divider my-0"></div>
-	<HorizontalCard
-		title="int64grep"
-		img="/int64grep.webp"
-		desc="It's a new flavour of grep, builded in Rust, to enhance speed and relaibility."
-		url="https://crates.io/crates/int64grep"
-		badge="Rust"
-		loading="eager"
-	/>
-	<div class="divider my-0"></div>
-	<HorizontalCard
-		title="neutron-diffusion-dd-rust"
-		img="/first-approach-to-optimize-precision-for-classical-1-dimensional-neutron-diffusion-problems.webp"
-		desc="1-D Neutron Diffusion Solver using the Diamond Difference Method implemented in Rust. This project aims to provide a fast and reliable tool for simulating neutron transport in nuclear reactors, leveraging Rust's performance and safety features."
-		url="https://crates.io/crates/neutron-diffusion-dd"
-		badge="Rust"
-		loading="eager"
-	/>
-
-	<div>
 		<div class="mb-5 mt-10 w-full text-3xl font-bold">Full-Stack Development 🌟</div>
 	</div>
 
@@ -78,5 +44,59 @@ import HorizontalCard from '../components/HorizontalCard.astro'
 		url="https://minegocio.pythonanywhere.com/Mi_negocio/listar_tiendas"
 		badge="Django | Bootstrap"
 	/>
+
 	<div class="divider my-0"></div>
+
+	<div>
+		<div class="mb-5 w-full text-3xl font-bold">Community Projects 🫂</div>
+	</div>
+
+	<HorizontalCard
+		title="Spider Man Brand New Day Landing Page"
+		img="/spider.webp"
+		desc="Project from Midudevs Community, a landing page for the Spider Man: Brand New Day movie, built with Astro and Tailwind CSS. The project showcases the movie's features, trailers, and promotional content, providing an engaging user experience for fans."
+		url="https://github.com/midudev/spiderman-brand-new-day"
+		badge="Astro | Tailwind CSS"
+		loading="eager"
+	/>
+
+	<HorizontalCard
+		title="Cargo-Tree-Tui"
+		img="/cargo_tree.webp"
+		desc="Project from Orhumdevs Community, a TUI (Text User Interface) application built with Rust and Ratatui. The project provides a visual representation of the dependency tree for Rust projects, allowing developers to easily navigate and understand their project's dependencies."
+		url="https://github.com/orhun/cargo-tree-tui"
+		badge="Rust"
+		loading="eager"
+	/>
+	<div>
+		<div class="mb-5 w-full text-3xl font-bold">Utils Projects 🛠️</div>
+	</div>
+
+	<HorizontalCard
+		title="Fast API Todo with IA integration"
+		img="/todo-fastapi.webp"
+		desc="Another Todo APP, but it's difference from others because use integration with IA to build resumes of your daily rutine and activities "
+		url="https://github.com/carlosr301101/todo-backend-FastAPI"
+		badge="FastAPI"
+		loading="eager"
+	/>
+
+	<div class="divider my-0"></div>
+	<HorizontalCard
+		title="int64grep"
+		img="/int64grep.webp"
+		desc="It's a new flavour of grep, builded in Rust, to enhance speed and relaibility."
+		url="https://crates.io/crates/int64grep"
+		badge="Rust"
+		loading="eager"
+	/>
+	<div class="divider my-0"></div>
+	<HorizontalCard
+		title="neutron-diffusion-dd-rust"
+		img="/first-approach-to-optimize-precision-for-classical-1-dimensional-neutron-diffusion-problems.webp"
+		desc="1-D Neutron Diffusion Solver using the Diamond Difference Method implemented in Rust. This project aims to provide a fast and reliable tool for simulating neutron transport in nuclear reactors, leveraging Rust's performance and safety features."
+		url="https://crates.io/crates/neutron-diffusion-dd"
+		badge="Rust"
+		loading="eager"
+	/>
 </BaseLayout>
